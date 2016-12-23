@@ -10,7 +10,7 @@ DEPS = emqttd emq_dashboard emq_recon emq_reloader emq_stomp emq_plugin_template
 
 # emq deps
 dep_emqttd        = git https://github.com/emqtt/emqttd master
-dep_emq_dashboard = git https://github.com/emqtt/emq_dashboard master
+dep_emq_dashboard = git https://github.com/apinf/emq_dashboard master
 dep_emq_recon     = git https://github.com/emqtt/emq_recon master
 dep_emq_reloader  = git https://github.com/emqtt/emq_reloader master
 dep_emq_stomp     = git https://github.com/emqtt/emq_stomp master
