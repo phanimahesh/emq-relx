@@ -6,11 +6,8 @@ PROJECT_VERSION = 2.3
 DEPS = goldrush
 dep_goldrush = git https://github.com/basho/goldrush 0.1.9
 
-DEPS += emqttd emq_modules emq_dashboard emq_retainer emq_recon emq_reloader \
-        emq_auth_clientid emq_auth_username emq_auth_ldap emq_auth_http \
-        emq_auth_mysql emq_auth_pgsql emq_auth_redis emq_auth_mongo \
-        emq_sn emq_coap emq_stomp emq_plugin_template emq_web_hook \
-        emq_lua_hook emq_elixir_plugin emq_auth_jwt
+DEPS += emqttd emq_dashboard\
+        emq_auth_pgsql emq_plugin_elasticsearch
 
 # emq deps
 dep_emqttd        = git https://github.com/emqtt/emqttd master
@@ -44,9 +41,12 @@ dep_emq_web_hook  = git https://github.com/emqtt/emq-web-hook master
 dep_emq_lua_hook  = git https://github.com/emqtt/emq-lua-hook master
 dep_emq_elixir_plugin = git  https://github.com/emqtt/emq-elixir-plugin master
 
+#dep_emq_plugin_elasticsearch = git https://github.com/phanimahesh/emq_plugin_elasticsearch
+dep_emq_plugin_elasticsearch = cp ../emq_plugin_elasticsearch
+
 # COVER = true
 
-NO_AUTOPATCH = emq_elixir_plugin
+NO_AUTOPATCH = emq_elixir_plugin datum knet esio
 
 include erlang.mk
 
